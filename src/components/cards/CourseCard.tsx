@@ -27,9 +27,17 @@ export function CourseCard({ course }: { course: Course }) {
           className="object-cover"
         />
         <div className="absolute inset-x-3 bottom-3 flex flex-wrap gap-2">
-          <Badge variant="glass">{course.lessons}</Badge>
-          <Badge variant="glass">{course.duration}</Badge>
-          <Badge variant="glass">{course.comments}</Badge>
+          <Badge variant="glass" className="px-3 py-1 text-xs">
+            {course.lessons}
+          </Badge>
+
+          <Badge variant="glass" className="px-3 py-1 text-xs">
+            {course.duration}
+          </Badge>
+
+          <Badge variant="glass" className="px-2 py-1 text-xs">
+            {course.comments}
+          </Badge>
         </div>
       </div>
 
