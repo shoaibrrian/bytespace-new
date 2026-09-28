@@ -1,1 +1,98 @@
 @import "tailwindcss";
+
+@theme {
+  /* Neutral */
+  --color-neutral-50: #f5f5f6;
+  --color-neutral-100: #e5e6e8;
+  --color-neutral-200: #ced0d3;
+  --color-neutral-300: #abaeb5;
+  --color-neutral-400: #82868e;
+  --color-neutral-500: #666973;
+  --color-neutral-600: #585a62;
+  --color-neutral-700: #4b4c53;
+  --color-neutral-800: #424348;
+  --color-neutral-900: #3a3b3f;
+  --color-neutral-950: #242528;
+
+  /* Primary (blue) */
+  --color-primary-50: #e7f6ff;
+  --color-primary-100: #d3eeff;
+  --color-primary-200: #b0ddff;
+  --color-primary-300: #81c5ff;
+  --color-primary-400: #4f9dff;
+  --color-primary-500: #2872ff;
+  --color-primary-600: #0445ff;
+  --color-primary-700: #0043ff;
+  --color-primary-800: #003be2;
+  --color-primary-900: #0b36a4;
+  --color-primary-950: #071e5f;
+
+  /* Secondary (lime) */
+  --color-secondary-50: #fdffe4;
+  --color-secondary-100: #faffc5;
+  --color-secondary-200: #f2ff92;
+  --color-secondary-300: #e4ff54;
+  --color-secondary-400: #d4fb20;
+  --color-secondary-500: #cbfc01;
+  --color-secondary-600: #8cb400;
+  --color-secondary-700: #6a8902;
+  --color-secondary-800: #546b09;
+  --color-secondary-900: #465a0d;
+  --color-secondary-950: #243300;
+
+  /* Layout */
+  --container-page: 1200px;
+
+  /* Typography scale (size + line-height from Figma) */
+  --text-body-l: 1.125rem;
+  --text-body-l--line-height: 1.6;
+  --text-body-m: 1rem;
+  --text-body-m--line-height: 1.6;
+  --text-body-s: 0.875rem;
+  --text-body-s--line-height: 1.6;
+  --text-body-xs: 0.75rem;
+  --text-body-xs--line-height: 1.6;
+
+  --text-label-xl: 1.25rem;
+  --text-label-xl--line-height: 1.2;
+  --text-label-l: 1.125rem;
+  --text-label-l--line-height: 1.2;
+  --text-label-m: 1rem;
+  --text-label-m--line-height: 1.2;
+  --text-label-s: 0.875rem;
+  --text-label-s--line-height: 1.2;
+  --text-label-xs: 0.75rem;
+  --text-label-xs--line-height: 1.2;
+}
+
+/* ---------- Fonts ---------- */
+@theme inline {
+  --font-heading: var(--font-poppins), system-ui, sans-serif;
+  --font-body: var(--font-satoshi), system-ui, sans-serif;
+}
+
+/* ---------- Base ---------- */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-white font-body text-body-m text-neutral-950 antialiased;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-heading;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
