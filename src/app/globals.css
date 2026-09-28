@@ -43,6 +43,14 @@
   /* Layout */
   --container-page: 1200px;
 
+  /* Heading scale */
+  --text-heading-l: 4.5rem;
+  --text-heading-l--line-height: 1.2;
+  --text-heading-l--letter-spacing: -0.01em;
+  --text-heading-m: 3rem;
+  --text-heading-m--line-height: 1.2;
+  --text-heading-m--letter-spacing: -0.01em;
+
   /* Typography scale (size + line-height from Figma) */
   --text-body-l: 1.125rem;
   --text-body-l--line-height: 1.6;
@@ -95,4 +103,37 @@
     transition: none !important;
     scroll-behavior: auto !important;
   }
+}
+
+/* Blue grid background used in hero */
+@utility bg-grid {
+  background-image:
+    linear-gradient(to right, rgb(255 255 255 / 0.12) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(255 255 255 / 0.12) 1px, transparent 1px);
+  background-size: 120px 120px;
+  background-position: calc(50% + 60px) -1px;
+}
+
+/* Person shadow (Figma's 8 layered shadows, applied to the PNG's shape) */
+/* Figma's 8 layered box-shadows */
+@utility shadow-person {
+  box-shadow:
+    0.52px 0.74px 3.04px 0 #0000000a,
+    2.23px 3.19px 5.72px 0 #0000000f,
+    5.38px 7.69px 9.57px 0 #00000012,
+    10.21px 14.58px 16.09px 0 #00000014,
+    16.95px 24.21px 24px 0 #00000017,
+    25.84px 36.91px 36px 0 #0000001a,
+    37.12px 53.03px 56px 0 #0000001b,
+    51.04px 72.91px 72px 0 #00000021;
+}
+
+/* Hero: scale factor relative to the 1440px Figma frame */
+@utility hero-scale {
+  --u: calc(100cqw / 1440);
+}
+
+/* Anchor 514px (search bar bottom) + remaining 510px scaled */
+@utility hero-height {
+  height: calc(514px + 510 * var(--u));
 }
