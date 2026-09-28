@@ -5,7 +5,7 @@ export function Logo({ className }: { className?: string }) {
   return (
     <Link href="/" aria-label="ByteSpace home" className={className}>
       <Image
-        src="/images/navbar/logo.png"
+        src="/images/navbar/logo.svg"
         alt="ByteSpace"
         width={172}
         height={36}
