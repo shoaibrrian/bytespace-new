@@ -1,12 +1,22 @@
 import Image from "next/image";
+import { cn } from "@/lib/utils";
+
+const sizes = {
+  sm: { box: "size-8", px: 32 },
+  md: { box: "size-9", px: 36 },
+} as const;
 
 export function AvatarGroup({
   avatars,
   label,
+  size = "md",
 }: {
-  avatars: string[];
+  avatars: readonly string[];
   label?: string;
+  size?: keyof typeof sizes;
 }) {
+  const { box, px } = sizes[size];
+
   return (
     <div className="flex items-center">
       {avatars.map((src) => (
@@ -14,13 +24,21 @@ export function AvatarGroup({
           key={src}
           src={src}
           alt=""
-          width={36}
-          height={36}
-          className="-ml-2 size-9 rounded-full border-2 border-white object-cover first:ml-0"
+          width={px}
+          height={px}
+          className={cn(
+            "-ml-2 rounded-full border-2 border-white object-cover first:ml-0",
+            box,
+          )}
         />
       ))}
       {label && (
-        <span className="-ml-2 flex size-9 items-center justify-center rounded-full border-2 border-white bg-secondary-500 text-label-xs font-medium text-neutral-950">
+        <span
+          className={cn(
+            "-ml-2 flex items-center justify-center rounded-full border-2 border-white bg-secondary-400 text-label-xs font-medium text-neutral-950",
+            box,
+          )}
+        >
           {label}
         </span>
       )}
