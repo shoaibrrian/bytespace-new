@@ -23,7 +23,7 @@ export function TestimonialsSection() {
           <h2 className="whitespace-pre-line text-3xl font-semibold leading-[1.3] tracking-[-0.01em] text-neutral-950 sm:text-4xl lg:text-heading-section">
             {testimonialsSection.title}
           </h2>
-          <p className="text-body-l text-neutral-600">
+          <p className="text-body-l text-[#4F4F4F]">
             {testimonialsSection.description}
           </p>
         </div>

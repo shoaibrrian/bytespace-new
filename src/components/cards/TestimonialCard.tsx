@@ -18,7 +18,7 @@ export function TestimonialCard({ testimonial }: { testimonial: Testimonial }) {
         {name}
       </p>
       <p className="mt-1 text-label-m text-primary-700">{role}</p>
-      <blockquote className="mt-7 text-body-l text-neutral-600">
+      <blockquote className="mt-7 text-body-l text-[#4F4F4F]">
         <p>{`"${quote}"`}</p>
       </blockquote>
     </Card>
