@@ -1,5 +1,8 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 
 type LogoProps = {
@@ -15,9 +18,15 @@ export function Logo({
   width = 172,
   height = 36,
 }: LogoProps) {
+  const pathname = usePathname();
+
   return (
     <Link
       href="/"
+      scroll={false}
+      onClick={() => {
+        if (pathname === "/") window.scrollTo({ top: 0, behavior: "smooth" });
+      }}
       aria-label="ByteSpace home"
       className={cn("block w-fit shrink-0", className)}
     >
