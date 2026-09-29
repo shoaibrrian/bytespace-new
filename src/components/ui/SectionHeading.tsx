@@ -11,6 +11,7 @@ type SectionHeadingProps = {
   align?: "center" | "left";
   size?: keyof typeof titleSizes;
   className?: string;
+  descriptionClassName?: string;
 };
 
 export function SectionHeading({
@@ -19,6 +20,7 @@ export function SectionHeading({
   align = "center",
   size = "lg",
   className,
+  descriptionClassName,
 }: SectionHeadingProps) {
   return (
     <div
@@ -39,7 +41,12 @@ export function SectionHeading({
         {title}
       </h2>
       {description && (
-        <p className="max-w-[900px] text-body-m text-neutral-400 lg:text-body-l">
+        <p
+          className={cn(
+            "max-w-[950px] text-body-m text-neutral-400 lg:text-body-l",
+            descriptionClassName,
+          )}
+        >
           {description}
         </p>
       )}
