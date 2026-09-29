@@ -37,9 +37,9 @@ export function SignInForm() {
         </div>
       </form>
 
-      <SocialAuth className="mt-20" />
+      <SocialAuth className="mt-10" />
 
-      <p className="mt-20 text-center text-body-l text-neutral-500">
+      <p className="mt-10 text-center text-body-l text-neutral-500">
         {c.switchPrompt}{" "}
         <Link
           href={c.switchHref}

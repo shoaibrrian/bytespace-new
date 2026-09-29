@@ -25,7 +25,9 @@ export function AuthShowcase() {
           width: v.backCard.width,
         }}
       >
-        <CourseCard course={courses[1]} />
+        <div className="origin-center scale-[0.9]">
+          <CourseCard course={courses[1]} />
+        </div>
       </Reveal>
 
       <Reveal
@@ -38,7 +40,9 @@ export function AuthShowcase() {
           width: v.frontCard.width,
         }}
       >
-        <CourseCard course={courses[2]} />
+        <div className="origin-center scale-[0.9]">
+          <CourseCard course={courses[2]} />
+        </div>
       </Reveal>
 
       <Reveal
@@ -64,7 +68,7 @@ export function AuthShowcase() {
         from="none"
         scaleFrom={0.6}
         delay={0.5}
-        className="absolute z-20"
+        className="absolute z-50"
         style={{
           left: v.spring.left,
           top: v.spring.top,
@@ -107,7 +111,7 @@ export function AuthShowcase() {
         scaleFrom={0.9}
         delay={0.7}
         className="absolute z-20"
-        style={{ left: v.students.left, top: v.students.top }}
+        style={{ left: v.students.left, top: v.students.top - 10 }}
       >
         <Float amplitude={6} duration={5.4}>
           <StudentsCard {...heroContent.students} tone="accent" />

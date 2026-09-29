@@ -9,7 +9,6 @@ type LogoProps = {
   height?: number;
 };
 
-// width/height must match the SVG's real aspect ratio (see its viewBox)
 export function Logo({
   className,
   src = "/images/navbar/logo.svg",
@@ -20,7 +19,6 @@ export function Logo({
     <Link
       href="/"
       aria-label="ByteSpace home"
-      // block + w-fit: the clickable area is exactly the logo, never the empty space around it
       className={cn("block w-fit shrink-0", className)}
     >
       <Image

@@ -2,11 +2,6 @@
 
 import { useEffect, useRef, useState } from "react";
 
-/**
- * Renders the hero <section> and flips data-ready="true" once every image is
- * decoded and fonts are loaded, so the entrance animation never starts on a
- * half-loaded page. A timeout keeps the hero from staying hidden on slow networks.
- */
 export function HeroReadyGate({
   children,
   ...props
