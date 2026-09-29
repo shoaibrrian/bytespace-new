@@ -19,7 +19,7 @@ export function AuthLayout({
     <main className="relative isolate min-h-screen overflow-hidden bg-primary-800 bg-grid pb-16 lg:pb-[120px]">
       <Container className="pt-6 lg:pt-[33px]">
         <Reveal from="top" distance={16} trigger="load">
-          <Logo />
+          <Logo src="/images/navbar/form-logo.svg" />
         </Reveal>
 
         <div className="mt-8 grid gap-10 lg:mt-[53px] lg:grid-cols-[1fr_579px] lg:gap-0">
