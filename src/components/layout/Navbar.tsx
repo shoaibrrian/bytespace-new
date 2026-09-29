@@ -1,9 +1,11 @@
 "use client";
 
 import { useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 import { Menu, ShoppingBag, X } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { authLinks, navLinks } from "@/data/navigation";
+import { ease } from "@/lib/motion";
 import { Logo } from "./Logo";
 import { NavLink } from "./NavLink";
 
@@ -12,7 +14,12 @@ export function Navbar() {
   const closeMenu = () => setOpen(false);
 
   return (
-    <header className="absolute inset-x-0 top-0 z-50">
+    <motion.header
+      initial={{ y: -24, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.7, ease }}
+      className="absolute inset-x-0 top-0 z-50"
+    >
       <Container>
         <nav
           aria-label="Main"
@@ -39,7 +46,7 @@ export function Navbar() {
             <button
               type="button"
               aria-label="Cart"
-              className="text-white transition-opacity hover:opacity-80"
+              className="text-white transition-transform duration-300 hover:scale-110"
             >
               <ShoppingBag className="size-5" />
             </button>
@@ -58,16 +65,24 @@ export function Navbar() {
         </nav>
 
         {/* Mobile menu */}
-        {open && (
-          <div className="flex flex-col gap-4 rounded-2xl bg-primary-950/95 p-6 backdrop-blur lg:hidden">
-            {[...navLinks, ...authLinks].map((link) => (
-              <NavLink key={link.label} href={link.href} onClick={closeMenu}>
-                {link.label}
-              </NavLink>
-            ))}
-          </div>
-        )}
+        <AnimatePresence>
+          {open && (
+            <motion.div
+              initial={{ opacity: 0, y: -8 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -8 }}
+              transition={{ duration: 0.25, ease }}
+              className="flex flex-col gap-4 rounded-2xl bg-primary-950/95 p-6 backdrop-blur lg:hidden"
+            >
+              {[...navLinks, ...authLinks].map((link) => (
+                <NavLink key={link.label} href={link.href} onClick={closeMenu}>
+                  {link.label}
+                </NavLink>
+              ))}
+            </motion.div>
+          )}
+        </AnimatePresence>
       </Container>
-    </header>
+    </motion.header>
   );
 }

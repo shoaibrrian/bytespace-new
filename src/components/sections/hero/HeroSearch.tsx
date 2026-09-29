@@ -10,7 +10,7 @@ export function HeroSearch({ placeholder }: { placeholder: string }) {
       onSubmit={(e) => e.preventDefault()} // TODO: connect to courses search
       className="mx-auto flex w-full max-w-[581px] flex-col items-start gap-4 sm:flex-row"
     >
-      <label className="flex w-full items-center gap-2 rounded-3xl bg-white px-6 py-3 sm:flex-1">
+      <label className="flex w-full items-center gap-2 rounded-3xl bg-white px-6 py-3 transition-shadow duration-300 focus-within:shadow-[0_0_0_4px_rgb(212_251_32/0.4)] sm:flex-1">
         <Search className="size-5 shrink-0 text-neutral-500" aria-hidden />
         <input
           type="search"

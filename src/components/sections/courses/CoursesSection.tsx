@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { Reveal } from "@/components/motion/Reveal";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import {
@@ -24,10 +25,12 @@ export function CoursesSection() {
   return (
     <section id="courses" className="bg-white py-16 lg:py-24">
       <Container>
-        <SectionHeading
-          title={coursesSection.title}
-          description={coursesSection.description}
-        />
+        <Reveal>
+          <SectionHeading
+            title={coursesSection.title}
+            description={coursesSection.description}
+          />
+        </Reveal>
         <CategoryFilter
           categories={courseCategories}
           active={activeCategory}
@@ -35,7 +38,7 @@ export function CoursesSection() {
           className="mt-10"
         />
         <div className="mt-12 lg:mt-19">
-          <CourseGrid courses={visibleCourses} />
+          <CourseGrid courses={visibleCourses} category={activeCategory} />
         </div>
       </Container>
     </section>

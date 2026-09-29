@@ -10,7 +10,7 @@ const variants = {
 type Variant = keyof typeof variants;
 
 const base =
-  "inline-flex cursor-pointer items-center justify-center gap-2 rounded-3xl px-6 py-3 text-label-l font-medium transition-all duration-300 active:scale-95 disabled:pointer-events-none disabled:opacity-50";
+  "inline-flex cursor-pointer items-center justify-center gap-2 rounded-3xl px-6 py-3 text-label-l font-medium transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-black/10 active:translate-y-0 active:scale-95 disabled:pointer-events-none disabled:opacity-50";
 
 export function buttonStyles(variant: Variant = "primary", className?: string) {
   return cn(base, variants[variant], className);

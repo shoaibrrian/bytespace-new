@@ -17,8 +17,9 @@ export function NavLink({
       href={href}
       aria-current={isActive ? "page" : undefined}
       className={cn(
-        "text-label-m text-white/80 transition-colors duration-300 hover:text-white",
-        isActive && "font-medium text-white",
+        "relative text-label-m text-white/80 transition-colors duration-300 hover:text-white",
+        "after:absolute after:inset-x-0 after:-bottom-1 after:h-px after:origin-left after:scale-x-0 after:bg-white after:transition-transform after:duration-300 hover:after:scale-x-100",
+        isActive && " text-white",
         className,
       )}
       {...props}

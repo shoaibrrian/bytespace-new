@@ -1,3 +1,4 @@
+import { Stagger, StaggerItem } from "@/components/motion/Stagger";
 import { CheckList } from "@/components/ui/CheckList";
 import { Container } from "@/components/ui/Container";
 import { GlowLayer } from "@/components/ui/GlowLayer";
@@ -23,11 +24,17 @@ export function GrowthSection() {
               <p className="mt-10 max-w-[500px] text-body-l text-neutral-600">
                 {pathSection.description}
               </p>
-              <div className="mt-10 flex gap-10 lg:gap-14">
+              <Stagger
+                gap={0.12}
+                delay={0.2}
+                className="mt-10 flex gap-10 lg:gap-14"
+              >
                 {pathSection.stats.map((stat) => (
-                  <StatItem key={stat.label} {...stat} />
+                  <StaggerItem key={stat.label} distance={20}>
+                    <StatItem {...stat} />
+                  </StaggerItem>
                 ))}
-              </div>
+              </Stagger>
             </FeatureCopy>
           }
           visual={<PathVisual />}
