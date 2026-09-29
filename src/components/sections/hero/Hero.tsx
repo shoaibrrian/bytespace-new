@@ -73,6 +73,9 @@ export function Hero() {
               height={person.height}
               priority
               className="h-auto w-full max-w-none"
+              style={{
+                clipPath: "inset(20px 0 0 0)",
+              }}
             />
           </div>
 

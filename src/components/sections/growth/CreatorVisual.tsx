@@ -49,6 +49,9 @@ export function CreatorVisual() {
           width={v.person.width}
           height={v.person.height}
           className="drop-shadow-person h-auto w-full max-w-none"
+          style={{
+            clipPath: "inset(30px 0 0 0)",
+          }}
         />
       </Reveal>
 
@@ -56,7 +59,7 @@ export function CreatorVisual() {
         from="left"
         distance={40}
         delay={0.3}
-        className="absolute z-20"
+        className="absolute"
         style={{
           left: v.yearly.left,
           top: v.yearly.top,

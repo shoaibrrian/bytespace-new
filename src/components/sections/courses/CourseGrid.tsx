@@ -43,7 +43,11 @@ export function CourseGrid({ courses, category }: CourseGridProps) {
           className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-10"
         >
           {courses.map((course) => (
-            <motion.div key={course.id} variants={item} className="grid">
+            <motion.div
+              key={course.id}
+              variants={item}
+              className="min-w-0 *:h-full"
+            >
               <CourseCard course={course} />
             </motion.div>
           ))}

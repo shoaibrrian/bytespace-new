@@ -19,7 +19,9 @@ export function PathVisual() {
           width: v.course.width,
         }}
       >
-        <CourseCard course={courses[0]} />
+        <div className="origin-center scale-[0.85]">
+          <CourseCard course={courses[0]} />
+        </div>
       </Reveal>
 
       <Reveal
@@ -39,6 +41,9 @@ export function PathVisual() {
           width={v.person.width}
           height={v.person.height}
           className="drop-shadow-person h-auto w-full max-w-none"
+          style={{
+            clipPath: "inset(30px 0 0 0)",
+          }}
         />
       </Reveal>
 
