@@ -9,6 +9,7 @@ type StudentsCardProps = {
   reviews: string;
   count: string;
   avatars: readonly string[];
+  tone?: "light" | "accent";
   className?: string;
   style?: React.CSSProperties;
 };
@@ -19,21 +20,36 @@ export function StudentsCard({
   reviews,
   count,
   avatars,
+  tone = "light",
   className,
   style,
 }: StudentsCardProps) {
+  const accent = tone === "accent";
+
   return (
     <FloatingCard
-      className={cn("flex flex-col gap-2", className)}
+      className={cn(
+        "flex flex-col gap-2",
+        accent &&
+          "bg-secondary-400 [--avatar-badge-bg:var(--color-neutral-950)] [--avatar-badge-text:white] [--avatar-ring:var(--color-secondary-400)]",
+        className,
+      )}
       style={style}
     >
       <div>
         <p className="text-label-m font-medium text-neutral-950">{title}</p>
         <p className="flex items-center gap-1 text-body-xs text-neutral-950">
           {rating}
-          <span className="text-neutral-400">{reviews}</span>
+          <span className={accent ? "text-neutral-600" : "text-neutral-400"}>
+            {reviews}
+          </span>
           <Star
-            className="size-3.5 fill-secondary-500 text-secondary-500"
+            className={cn(
+              "size-3.5",
+              accent
+                ? "fill-primary-700 text-primary-700"
+                : "fill-secondary-500 text-secondary-500",
+            )}
             aria-hidden
           />
         </p>
