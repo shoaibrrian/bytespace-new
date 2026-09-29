@@ -26,16 +26,13 @@ export function AvatarGroup({
           alt=""
           width={px}
           height={px}
-          className={cn(
-            "-ml-2 rounded-full border-2 border-white object-cover first:ml-0",
-            box,
-          )}
+          className={cn("-ml-2 rounded-full  object-cover first:ml-0", box)}
         />
       ))}
       {label && (
         <span
           className={cn(
-            "-ml-2 flex items-center justify-center rounded-full border-2 border-white bg-secondary-400 text-label-xs font-medium text-neutral-950",
+            "-ml-2 flex items-center justify-center rounded-full text-xs bg-secondary-400 text-label-xs font-bold text-neutral-950",
             box,
           )}
         >

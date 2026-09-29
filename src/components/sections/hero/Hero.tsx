@@ -46,7 +46,7 @@ export function Hero() {
             width={person.width}
             height={person.height}
             priority
-            className="drop-shadow-person absolute left-1/2 top-0 h-auto w-[280px] -translate-x-1/2 object-cover sm:w-[360px] lg:left-(--left) lg:top-(--top) lg:h-(--h) lg:w-(--w) lg:translate-x-0"
+            className="shadow-person absolute left-1/2 top-0 h-auto w-[280px] -translate-x-1/2 object-cover sm:w-[360px] lg:left-(--left) lg:top-(--top) lg:h-(--h) lg:w-(--w) lg:translate-x-0"
             style={
               {
                 "--left": dx(person.left),

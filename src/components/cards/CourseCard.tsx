@@ -26,16 +26,16 @@ export function CourseCard({ course }: { course: Course }) {
           sizes="(min-width: 1024px) 341px, (min-width: 640px) 50vw, 100vw"
           className="object-cover"
         />
-        <div className="absolute inset-x-3 bottom-3 flex flex-wrap gap-2">
-          <Badge variant="glass" className="px-3 py-1 text-xs">
+        <div className="absolute inset-x-3 bottom-3 flex flex-wrap gap-2 font-medium">
+          <Badge variant="glass" className="px-2.5 py-1 text-xs">
             {course.lessons}
           </Badge>
 
-          <Badge variant="glass" className="px-3 py-1 text-xs">
+          <Badge variant="glass" className="px-2.5 py-1 text-xs">
             {course.duration}
           </Badge>
 
-          <Badge variant="glass" className="px-2 py-1 text-xs">
+          <Badge variant="glass" className="px-2.5 py-1 text-xs">
             {course.comments}
           </Badge>
         </div>
@@ -59,10 +59,10 @@ export function CourseCard({ course }: { course: Course }) {
         </p>
       </div>
 
-      <div className="flex items-center gap-2">
+      <div className="flex items-center gap-3">
         <Badge>
           <LevelIcon />
-          {course.level}
+          <span className="font-medium">{course.level}</span>
         </Badge>
         <AvatarGroup
           size="sm"
