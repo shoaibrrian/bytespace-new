@@ -66,7 +66,7 @@ export function CourseCard({ course }: { course: Course }) {
         </Badge>
         <AvatarGroup
           size="sm"
-          avatars={courseAvatars.images}
+          avatars={courseAvatars.assets}
           label={courseAvatars.count}
         />
       </div>

@@ -7,7 +7,7 @@ type IconProps = {
 export function FacebookIcon({ className }: IconProps) {
   return (
     <Image
-      src="/images/auth/facebook.svg"
+      src="/assets/auth/facebook.svg"
       alt=""
       width={24}
       height={24}
@@ -19,7 +19,7 @@ export function FacebookIcon({ className }: IconProps) {
 export function GoogleIcon({ className }: IconProps) {
   return (
     <Image
-      src="/images/auth/google.svg"
+      src="/assets/auth/google.svg"
       alt=""
       width={24}
       height={24}

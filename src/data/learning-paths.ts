@@ -5,26 +5,26 @@ export const learningPathsSection = {
 };
 
 export const learningPaths = [
-  { id: "design", label: "Design", icon: "/images/learning-path/lp1.svg" },
+  { id: "design", label: "Design", icon: "/assets/learning-path/lp1.svg" },
   {
     id: "development",
     label: "Development",
-    icon: "/images/learning-path/lp2.svg",
+    icon: "/assets/learning-path/lp2.svg",
   },
   {
     id: "it-software",
     label: "IT & Software",
-    icon: "/images/learning-path/lp3.svg",
+    icon: "/assets/learning-path/lp3.svg",
   },
-  { id: "business", label: "Business", icon: "/images/learning-path/lp4.svg" },
+  { id: "business", label: "Business", icon: "/assets/learning-path/lp4.svg" },
   {
     id: "marketing",
     label: "Marketing",
-    icon: "/images/learning-path/lp5.svg",
+    icon: "/assets/learning-path/lp5.svg",
   },
   {
     id: "photography",
     label: "Photography",
-    icon: "/images/learning-path/lp6.svg",
+    icon: "/assets/learning-path/lp6.svg",
   },
 ] as const;
