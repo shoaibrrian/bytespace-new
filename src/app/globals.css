@@ -138,3 +138,8 @@
 @utility hero-height {
   height: calc(514px + 510 * var(--u));
 }
+
+/* Scale factor relative to a 1440px Figma frame (needs an @container ancestor) */
+@utility design-scale {
+  --u: calc(100cqw / 1440);
+}
