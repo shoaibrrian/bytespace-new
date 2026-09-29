@@ -6,6 +6,10 @@ const sizes = {
   md: { box: "size-9", px: 36 },
 } as const;
 
+/**
+ * Themeable through CSS variables set on any ancestor:
+ * --avatar-badge-bg, --avatar-badge-text, --avatar-ring
+ */
 export function AvatarGroup({
   avatars,
   label,
@@ -26,13 +30,13 @@ export function AvatarGroup({
           alt=""
           width={px}
           height={px}
-          className={cn("-ml-2 rounded-full  object-cover first:ml-0", box)}
+          className={cn("-ml-2 rounded-full object-cover first:ml-0", box)}
         />
       ))}
       {label && (
         <span
           className={cn(
-            "-ml-2 flex items-center justify-center rounded-full text-xs bg-secondary-400 text-label-xs font-bold text-neutral-950",
+            "-ml-2 flex items-center justify-center rounded-full  bg-[color:var(--avatar-badge-bg,var(--color-secondary-400))] text-label-xs text-xs font-medium text-[color:var(--avatar-badge-text,var(--color-neutral-950))]",
             box,
           )}
         >

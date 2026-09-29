@@ -4,7 +4,6 @@ import { useEffect, useRef, useState } from "react";
 import { animate, useInView, useReducedMotion } from "framer-motion";
 import { ease } from "@/lib/motion";
 
-/** Counts "12K", "70+", "16" up from 0 when scrolled into view. The final value reserves its width, so nothing shifts. */
 export function CountUp({
   value,
   duration = 1.6,

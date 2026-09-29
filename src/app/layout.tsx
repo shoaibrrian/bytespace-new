@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import localFont from "next/font/local";
+import { ScrollToTop } from "@/components/layout/ScrollToTop";
 import { MotionProvider } from "@/components/motion/MotionProvider";
 import "./globals.css";
 
@@ -26,9 +27,16 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${poppins.variable} ${satoshi.variable}`}>
+    <html
+      lang="en"
+      data-scroll-behavior="smooth"
+      className={`${poppins.variable} ${satoshi.variable}`}
+    >
       <body>
-        <MotionProvider>{children}</MotionProvider>
+        <MotionProvider>
+          <ScrollToTop />
+          {children}
+        </MotionProvider>
       </body>
     </html>
   );
