@@ -92,14 +92,14 @@ export const growthGlows = {
     {
       src: "/assets/detail/glow-lime-bottom.svg",
       left: 0,
-      top: 690,
+      top: 740,
       width: 560,
       height: 560,
     },
     {
       src: "/assets/detail/glow-blue-bottom.svg",
       left: 840,
-      top: 870,
+      top: 920,
       width: 600,
       height: 600,
     },

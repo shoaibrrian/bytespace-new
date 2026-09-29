@@ -58,7 +58,7 @@ export const heroShapes = [
   },
   {
     src: "/assets/hero/cylinder-lime.svg",
-    left: 1275,
+    left: 1285,
     top: 255,
     width: 165,
     height: 165,

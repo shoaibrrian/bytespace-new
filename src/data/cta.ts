@@ -31,7 +31,7 @@ export const ctaShapes = [
   {
     src: "/assets/cta/ring-lime.svg",
     left: 20,
-    top: 300,
+    top: 310,
     width: 342,
     height: 342,
   },
@@ -52,7 +52,7 @@ export const ctaShapes = [
   {
     src: "/assets/cta/spring-lime-2.svg",
     left: 1100,
-    top: 291,
+    top: 310,
     width: 330,
     height: 330,
   },

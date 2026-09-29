@@ -60,7 +60,7 @@ export const testimonialsGlows = {
     {
       src: "/assets/testimonials/glow-blue-left.png",
       left: 0,
-      top: 250,
+      top: 270,
       width: 560,
       height: 560,
     },
