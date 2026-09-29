@@ -76,16 +76,16 @@ export const heroShapes = [
 export const heroVisual = {
   person: {
     src: "/images/hero/person.svg",
-    left: 450,
-    top: 512,
-    width: 578,
-    height: 541,
+    left: 400,
+    top: 525,
+    width: 700,
+    height: 521,
   },
   background: {
     src: "/images/hero/hero-img-bg.svg",
     left: 145,
-    top: 582,
-    width: 1149,
-    height: 1149,
+    top: 601,
+    width: 1100,
+    height: 1100,
   },
 } as const;

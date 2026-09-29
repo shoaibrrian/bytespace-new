@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { heroContent, heroVisual } from "@/data/hero";
-import { dx, dy } from "@/lib/utils";
+import { uw, ux, uy } from "@/lib/utils";
 import { HeroDecor } from "./HeroDecor";
 import { HeroSearch } from "./HeroSearch";
 
@@ -11,7 +11,7 @@ export function Hero() {
   return (
     <div className="@container">
       <section className="hero-scale relative isolate overflow-hidden bg-primary-800 bg-grid lg:hero-height">
-        <Container className="relative z-10 pt-32 text-center lg:pt-[172px]">
+        <Container className="relative z-30 pt-32 text-center lg:pt-[172px]">
           <h1 className="mx-auto max-w-[935px] text-4xl font-semibold leading-[1.2] tracking-[-0.01em] text-white sm:text-6xl lg:text-heading-l">
             {heroContent.title}
           </h1>
@@ -23,22 +23,20 @@ export function Hero() {
           </div>
         </Container>
 
-        {/* Ring + person: stacked on mobile, Figma-positioned and scaled on desktop */}
-        <div className="relative z-0 mx-auto mt-12 h-[340px] overflow-hidden sm:h-[420px] lg:absolute lg:inset-0 lg:mt-0 lg:h-auto">
+        {/* Visual stage: in flow below lg, covers the whole hero at lg */}
+        <div className="pointer-events-none relative mt-8 h-[calc(510*var(--u))] [--y0:0px] lg:absolute lg:inset-0 lg:mt-0 lg:h-auto lg:[--y0:514px]">
           <Image
             src={background.src}
             alt=""
             aria-hidden
             width={background.width}
             height={background.height}
-            className="absolute left-1/2 top-6 h-auto w-[130%] max-w-none -translate-x-1/2 sm:w-[110%] lg:left-(--left) lg:top-(--top) lg:w-(--w) lg:translate-x-0"
-            style={
-              {
-                "--left": dx(background.left),
-                "--top": dy(background.top),
-                "--w": dx(background.width),
-              } as React.CSSProperties
-            }
+            className="absolute z-0 h-auto max-w-none"
+            style={{
+              left: ux(background.left),
+              top: uy(background.top),
+              width: uw(background.width),
+            }}
           />
           <Image
             src={person.src}
@@ -46,19 +44,16 @@ export function Hero() {
             width={person.width}
             height={person.height}
             priority
-            className="shadow-person absolute left-1/2 top-0 h-auto w-[280px] -translate-x-1/2 object-cover sm:w-[360px] lg:left-(--left) lg:top-(--top) lg:h-(--h) lg:w-(--w) lg:translate-x-0"
-            style={
-              {
-                "--left": dx(person.left),
-                "--top": dy(person.top),
-                "--w": dx(person.width),
-                "--h": dx(person.height),
-              } as React.CSSProperties
-            }
+            className="absolute z-10 h-auto max-w-none"
+            style={{
+              left: ux(person.left),
+              top: uy(person.top),
+              width: uw(person.width),
+              clipPath: "inset(20px 0 0 0)",
+            }}
           />
+          <HeroDecor />
         </div>
-
-        <HeroDecor />
       </section>
     </div>
   );

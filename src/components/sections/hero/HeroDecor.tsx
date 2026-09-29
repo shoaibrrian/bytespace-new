@@ -1,37 +1,47 @@
 import Image from "next/image";
-import { Star } from "lucide-react";
-import { AvatarGroup } from "@/components/ui/AvatarGroup";
+import { ProgressCard } from "@/components/cards/ProgressCard";
+import { StudentsCard } from "@/components/cards/StudentsCard";
 import { FloatingCard } from "@/components/ui/FloatingCard";
-import { ProgressBar } from "@/components/ui/ProgressBar";
 import { heroContent, heroShapes } from "@/data/hero";
-import { dx, dy } from "@/lib/utils";
+import { cn, HERO_ANCHOR_Y, uw, ux, uy } from "@/lib/utils";
+
+// Cards show from tablet up, at 75% size until lg
+const cardBase =
+  "absolute z-20 hidden origin-top-left md:scale-75 lg:scale-100";
 
 export function HeroDecor() {
   const { category, progress, students } = heroContent;
 
   return (
-    <div className="pointer-events-none absolute inset-0 z-20 hidden lg:block">
-      {heroShapes.map((shape) => (
-        <Image
-          key={shape.src}
-          src={shape.src}
-          alt=""
-          aria-hidden
-          width={shape.width}
-          height={shape.height}
-          className="absolute h-auto max-w-none"
-          style={{
-            left: dx(shape.left),
-            top: dy(shape.top),
-            width: dx(shape.width),
-          }}
-        />
-      ))}
+    <>
+      {heroShapes.map((shape) => {
+        // Shapes beside the heading would overlap the text on small screens
+        const besideHeading = shape.top + shape.height / 2 < HERO_ANCHOR_Y;
 
-      {/* Category card */}
+        return (
+          <Image
+            key={shape.src}
+            src={shape.src}
+            alt=""
+            aria-hidden
+            width={shape.width}
+            height={shape.height}
+            className={cn(
+              "absolute z-20 h-auto max-w-none",
+              besideHeading && "hidden lg:block",
+            )}
+            style={{
+              left: ux(shape.left),
+              top: uy(shape.top),
+              width: uw(shape.width),
+            }}
+          />
+        );
+      })}
+
       <FloatingCard
-        className="absolute whitespace-nowrap"
-        style={{ left: dx(404), top: dy(639) }}
+        className={cn(cardBase, "whitespace-nowrap md:block")}
+        style={{ left: ux(404), top: uy(639) }}
       >
         <p className="text-label-m font-medium text-neutral-950">
           {category.title}
@@ -43,40 +53,18 @@ export function HeroDecor() {
         </p>
       </FloatingCard>
 
-      {/* Learning progress card */}
-      <FloatingCard
-        className="absolute flex w-[232px] flex-col gap-2"
-        style={{ left: dx(842), top: dy(651) }}
-      >
-        <p className="text-label-s font-medium text-neutral-950">
-          {progress.label}
-        </p>
-        <p className="font-heading text-heading-m font-semibold text-neutral-950">
-          {progress.value}%
-        </p>
-        <ProgressBar value={progress.value} />
-      </FloatingCard>
+      <ProgressCard
+        label={progress.label}
+        value={progress.value}
+        className={cn(cardBase, "md:flex")}
+        style={{ left: ux(842), top: uy(651) }}
+      />
 
-      {/* Happy students card */}
-      <FloatingCard
-        className="absolute flex flex-col gap-2"
-        style={{ left: dx(328), top: dy(837) }}
-      >
-        <div>
-          <p className="text-label-m font-medium text-neutral-950">
-            {students.title}
-          </p>
-          <p className="flex items-center gap-1 text-body-xs text-neutral-950">
-            {students.rating}
-            <span className="text-neutral-400">{students.reviews}</span>
-            <Star
-              className="size-3.5 fill-secondary-500 text-secondary-500"
-              aria-hidden
-            />
-          </p>
-        </div>
-        <AvatarGroup avatars={students.avatars} label={students.count} />
-      </FloatingCard>
-    </div>
+      <StudentsCard
+        {...students}
+        className={cn(cardBase, "md:flex")}
+        style={{ left: ux(328), top: uy(837) }}
+      />
+    </>
   );
 }

@@ -131,7 +131,16 @@
 
 /* Hero: scale factor relative to the 1440px Figma frame */
 @utility hero-scale {
-  --u: calc(100cqw / 1440);
+  --u: calc(100cqw / 720);
+  @media (min-width: 40rem) {
+    --u: calc(100cqw / 960);
+  }
+  @media (min-width: 48rem) {
+    --u: calc(100cqw / 1100);
+  }
+  @media (min-width: 64rem) {
+    --u: calc(100cqw / 1440);
+  }
 }
 
 /* Anchor 514px (search bar bottom) + remaining 510px scaled */
