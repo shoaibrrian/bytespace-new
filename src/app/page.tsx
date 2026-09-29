@@ -5,6 +5,7 @@ import { GrowthSection } from "@/components/sections/growth/GrowthSection";
 import { Hero } from "@/components/sections/hero/Hero";
 import { LearningPaths } from "@/components/sections/learning-paths/LearningPaths";
 import { LogoStrip } from "@/components/sections/logo-strip/LogoStrip";
+import { TestimonialsSection } from "@/components/sections/testimonials/TestimonialsSection";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
         <LearningPaths />
         <GrowthSection />
         <CtaSection />
+        <TestimonialsSection />
       </main>
     </>
   );
