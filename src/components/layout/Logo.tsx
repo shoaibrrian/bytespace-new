@@ -1,11 +1,19 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export function Logo({ className }: { className?: string }) {
+type LogoProps = {
+  className?: string;
+  src?: string;
+};
+
+export function Logo({
+  className,
+  src = "/images/navbar/logo.png",
+}: LogoProps) {
   return (
     <Link href="/" aria-label="ByteSpace home" className={className}>
       <Image
-        src="/images/navbar/logo.svg"
+        src={src}
         alt="ByteSpace"
         width={172}
         height={36}
