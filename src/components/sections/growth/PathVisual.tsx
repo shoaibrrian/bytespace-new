@@ -17,7 +17,9 @@ export function PathVisual() {
           width: v.course.width,
         }}
       >
-        <CourseCard course={courses[0]} />
+        <div className="origin-center scale-[0.85]">
+          <CourseCard course={courses[0]} />
+        </div>
       </div>
 
       <Image
@@ -30,6 +32,7 @@ export function PathVisual() {
           left: v.person.left,
           top: v.person.top,
           width: v.person.width,
+          clipPath: "inset(30px 0 0 0)",
         }}
       />
 

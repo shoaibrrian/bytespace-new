@@ -30,11 +30,12 @@ export function CreatorVisual() {
         alt="Creator holding a tablet"
         width={v.person.width}
         height={v.person.height}
-        className="drop-shadow-person absolute z-10 h-auto max-w-none"
+        className="drop-shadow-person absolute z-10 h-auto max-w-none "
         style={{
           left: v.person.left,
           top: v.person.top,
           width: v.person.width,
+          clipPath: "inset(30px 0 0 0)",
         }}
       />
 
@@ -43,7 +44,7 @@ export function CreatorVisual() {
         period="2023"
         amount="$1,200.38"
         badge="+12$"
-        className="absolute z-20"
+        className="absolute"
         style={{
           left: v.yearly.left,
           top: v.yearly.top,
@@ -57,7 +58,7 @@ export function CreatorVisual() {
         aria-hidden
         width={v.spring.width}
         height={v.spring.height}
-        className="absolute z-20 h-auto max-w-none"
+        className="absolute z-20 h-auto max-w-none "
         style={{
           left: v.spring.left,
           top: v.spring.top,

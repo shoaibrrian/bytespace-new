@@ -8,7 +8,7 @@ type LogoProps = {
 
 export function Logo({
   className,
-  src = "/images/navbar/logo.png",
+  src = "/images/navbar/logo.svg",
 }: LogoProps) {
   return (
     <Link href="/" aria-label="ByteSpace home" className={className}>
