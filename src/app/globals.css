@@ -71,6 +71,10 @@
   --text-label-s--line-height: 1.2;
   --text-label-xs: 0.75rem;
   --text-label-xs--line-height: 1.2;
+
+  --text-heading-s: 2rem;
+  --text-heading-s--line-height: 1.2;
+  --text-heading-s--letter-spacing: -0.01em;
 }
 
 /* ---------- Fonts ---------- */
