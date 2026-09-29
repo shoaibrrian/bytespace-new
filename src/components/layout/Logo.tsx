@@ -14,7 +14,7 @@ type LogoProps = {
 
 export function Logo({
   className,
-  src = "/images/navbar/logo.svg",
+  src = "/assets/navbar/logo.svg",
   width = 172,
   height = 36,
 }: LogoProps) {

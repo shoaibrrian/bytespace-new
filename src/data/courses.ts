@@ -43,11 +43,11 @@ export type Course = {
 };
 
 export const courseAvatars = {
-  images: [
-    "/images/skill-card/sc-avatars/sca1.png",
-    "/images/skill-card/sc-avatars/sca2.png",
-    "/images/skill-card/sc-avatars/sca3.png",
-    "/images/skill-card/sc-avatars/sca4.png",
+  assets: [
+    "/assets/skill-card/sc-avatars/sca1.png",
+    "/assets/skill-card/sc-avatars/sca2.png",
+    "/assets/skill-card/sc-avatars/sca3.png",
+    "/assets/skill-card/sc-avatars/sca4.png",
   ],
   count: "26+",
 };
@@ -71,42 +71,42 @@ export const courses: Course[] = [
     ...base,
     id: "learn-figma",
     title: "Learn Figma from Basic",
-    thumbnail: "/images/skill-card/sc1.jpg",
+    thumbnail: "/assets/skill-card/sc1.jpg",
     categories: ["Featured", "UI/UX Design", "Graphic Design"],
   },
   {
     ...base,
     id: "digital-asset",
     title: "Build Digital Asset",
-    thumbnail: "/images/skill-card/sc2.jpg",
+    thumbnail: "/assets/skill-card/sc2.jpg",
     categories: ["Featured", "Graphic Design", "Digital Illustration"],
   },
   {
     ...base,
     id: "big-data",
     title: "the Power of Big Data",
-    thumbnail: "/images/skill-card/sc3.jpg",
+    thumbnail: "/assets/skill-card/sc3.jpg",
     categories: ["Featured", "Data Science"],
   },
   {
     ...base,
     id: "productivity",
     title: "Balancing Productivity and Life",
-    thumbnail: "/images/skill-card/sc4.jpg",
+    thumbnail: "/assets/skill-card/sc4.jpg",
     categories: ["Featured", "Productivity"],
   },
   {
     ...base,
     id: "money-management",
     title: "Mastering Money Management",
-    thumbnail: "/images/skill-card/sc5.jpg",
+    thumbnail: "/assets/skill-card/sc5.jpg",
     categories: ["Featured", "Freelance & Entrepreneurship"],
   },
   {
     ...base,
     id: "startup-success",
     title: "From Idea to Startup Success",
-    thumbnail: "/images/skill-card/sc6.jpg",
+    thumbnail: "/assets/skill-card/sc6.jpg",
     categories: ["Featured", "Marketing", "Freelance & Entrepreneurship"],
   },
 ];

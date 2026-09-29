@@ -24,7 +24,7 @@ export function Footer() {
       <Container>
         <div className="flex flex-col gap-12 lg:flex-row lg:justify-between">
           <Reveal className="lg:w-[504px]">
-            <Logo src="/images/footer/logo.svg" width={172} height={36} />
+            <Logo src="/assets/footer/logo.svg" width={172} height={36} />
             <p className="mt-4 text-body-s text-neutral-950">{tagline}</p>
             <NewsletterForm
               className="mt-11"

@@ -14,8 +14,8 @@ export function HeroReadyGate({
     if (!section) return;
 
     let cancelled = false;
-    const images = Array.from(section.querySelectorAll("img"));
-    const decoded = images.map((img) => img.decode().catch(() => undefined));
+    const assets = Array.from(section.querySelectorAll("img"));
+    const decoded = assets.map((img) => img.decode().catch(() => undefined));
     const timeout = new Promise((resolve) => setTimeout(resolve, 2000));
 
     Promise.race([

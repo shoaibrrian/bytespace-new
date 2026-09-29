@@ -27,7 +27,7 @@ export const pathVisual = {
   stage: { width: 580, height: 570 },
   course: { left: 0, top: 0, width: 373 },
   person: {
-    src: "/images/detail/boy.svg",
+    src: "/assets/detail/boy.svg",
     left: 10,
     top: 55,
     width: 600,
@@ -35,7 +35,7 @@ export const pathVisual = {
   },
   progress: { left: 345, top: 213, value: 55 },
   spring: {
-    src: "/images/detail/spring-lime-1.svg",
+    src: "/assets/detail/spring-lime-1.svg",
     left: 406,
     top: 67,
     width: 215,
@@ -46,7 +46,7 @@ export const pathVisual = {
 export const creatorVisual = {
   stage: { width: 545, height: 560 },
   person: {
-    src: "/images/detail/girl.svg",
+    src: "/assets/detail/girl.svg",
     left: 28,
     top: 0,
     width: 535,
@@ -55,7 +55,7 @@ export const creatorVisual = {
   revenue: { left: 0, top: 8, width: 232 },
   yearly: { left: 0, top: 158, width: 134 },
   spring: {
-    src: "/images/detail/spring-lime-2.svg",
+    src: "/assets/detail/spring-lime-2.svg",
     left: 305,
     top: 114,
     width: 215,
@@ -69,35 +69,35 @@ export const growthGlows = {
   designHeight: 1460,
   items: [
     {
-      src: "/images/detail/glow-lime-top.svg",
+      src: "/assets/detail/glow-lime-top.svg",
       left: 60,
       top: 0,
       width: 1000,
       height: 1000,
     },
     {
-      src: "/images/detail/glow-blue-top.svg",
+      src: "/assets/detail/glow-blue-top.svg",
       left: 940,
       top: 0,
       width: 500,
       height: 500,
     },
     {
-      src: "/images/detail/glow-blue-left.svg",
+      src: "/assets/detail/glow-blue-left.svg",
       left: 0,
       top: 183,
       width: 560,
       height: 560,
     },
     {
-      src: "/images/detail/glow-lime-bottom.svg",
+      src: "/assets/detail/glow-lime-bottom.svg",
       left: 0,
       top: 690,
       width: 560,
       height: 560,
     },
     {
-      src: "/images/detail/glow-blue-bottom.svg",
+      src: "/assets/detail/glow-blue-bottom.svg",
       left: 840,
       top: 870,
       width: 600,
