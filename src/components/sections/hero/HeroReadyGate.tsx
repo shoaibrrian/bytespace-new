@@ -16,8 +16,6 @@ export function HeroReadyGate({
     if (!section) return;
 
     let cancelled = false;
-    // Wait only for images that are on screen. Hidden ones (display: none) and ones
-    // below the fold are not loaded yet and must not delay the entrance animation.
     const assets = Array.from(section.querySelectorAll("img")).filter((img) => {
       const rect = img.getBoundingClientRect();
       return rect.width > 0 && rect.top < window.innerHeight;

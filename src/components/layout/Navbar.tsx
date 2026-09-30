@@ -20,7 +20,6 @@ export function Navbar() {
   const closeMenu = () => setOpen(false);
 
   const scrolled = useScrolled();
-  // The bar gets a background once the page scrolls, or while the mobile menu is open
   const solid = scrolled || open;
 
   const pathname = usePathname();
@@ -34,7 +33,6 @@ export function Navbar() {
       transition={{ duration: 0.7, ease }}
       className={cn(
         "fixed inset-x-0 top-0 z-50 border-b",
-        // transform and opacity are driven by Framer Motion, so they are left out here
         "transition-[background-color,border-color,box-shadow,backdrop-filter] duration-300",
         solid
           ? "border-white/10 bg-primary-800/80 shadow-[0_8px_30px_rgb(0_0_0/0.12)] backdrop-blur-lg"

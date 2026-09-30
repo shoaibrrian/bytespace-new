@@ -5,8 +5,6 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 
-// Intrinsic size of each logo file. next/image needs the real aspect ratio,
-// otherwise it warns that only one of width/height was modified.
 const LOGO_SIZES: Record<string, { width: number; height: number }> = {
   "/assets/navbar/logo.svg": { width: 171, height: 37 },
   "/assets/footer/logo.svg": { width: 171, height: 37 },

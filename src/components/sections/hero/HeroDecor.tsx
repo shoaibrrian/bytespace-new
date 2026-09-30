@@ -15,7 +15,6 @@ export function HeroDecor() {
   return (
     <>
       {heroShapes.map((shape, i) => {
-        // Shapes beside the heading would overlap the text on small screens
         const besideHeading = shape.top + shape.height / 2 < HERO_ANCHOR_Y;
         const delay = 0.6 + i * 0.08;
 

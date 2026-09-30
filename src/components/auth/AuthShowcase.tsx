@@ -8,7 +8,6 @@ import { authShowcase as v } from "@/data/auth";
 import { courses } from "@/data/courses";
 import { heroContent } from "@/data/hero";
 
-// Login variant of CourseCard: lime star, dark avatar badge (theme via CSS variables)
 const accentCard =
   "[--avatar-badge-bg:var(--color-neutral-950)] [--avatar-badge-text:white] [&_.lucide-star]:fill-secondary-400 [&_.lucide-star]:text-secondary-400";
 

@@ -5,7 +5,6 @@ import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 
 type NavLinkProps = React.ComponentProps<typeof Link> & {
-  /** Overrides the default "current page" check (used for scroll-spy links) */
   active?: boolean;
 };
 

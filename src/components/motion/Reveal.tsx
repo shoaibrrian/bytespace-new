@@ -6,14 +6,11 @@ import { ease, viewport } from "@/lib/motion";
 type Direction = "bottom" | "top" | "left" | "right" | "none";
 
 type RevealProps = HTMLMotionProps<"div"> & {
-  /** Where the element comes from */
   from?: Direction;
   distance?: number;
   delay?: number;
   duration?: number;
-  /** Start scale (e.g. 0.9 for a soft pop-in) */
   scaleFrom?: number;
-  /** "view" = when scrolled into view, "load" = on page load */
   trigger?: "view" | "load";
 };
 

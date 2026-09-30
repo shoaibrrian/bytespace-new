@@ -6,7 +6,6 @@ export function ProgressBar({
   className,
 }: {
   value: number;
-  /** Accessible name announced by screen readers */
   label?: string;
   className?: string;
 }) {

@@ -35,7 +35,6 @@ export function Hero() {
           </div>
         </Container>
 
-        {/* Visual stage: in flow below lg, covers the whole hero at lg */}
         <div className="pointer-events-none relative mt-8 h-[calc(510*var(--u))] [--y0:0px] lg:absolute lg:inset-0 lg:mt-0 lg:h-auto lg:[--y0:514px]">
           <div
             className="hero-enter absolute z-0"

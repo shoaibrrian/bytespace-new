@@ -2,12 +2,6 @@
 
 import { useEffect, useState } from "react";
 
-/**
- * Scroll-spy. Returns:
- * - "home" above the first tracked section
- * - the id of the last tracked section whose top has passed the trigger line
- * - null once the last tracked section is fully scrolled past
- */
 export function useActiveSection(ids: readonly string[], triggerAt = 0.35) {
   const [active, setActive] = useState<string | null>("home");
 
