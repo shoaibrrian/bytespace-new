@@ -2,14 +2,17 @@ import { cn } from "@/lib/utils";
 
 export function ProgressBar({
   value,
+  label = "Progress",
   className,
 }: {
   value: number;
+  label?: string;
   className?: string;
 }) {
   return (
     <div
       role="progressbar"
+      aria-label={label}
       aria-valuenow={value}
       aria-valuemin={0}
       aria-valuemax={100}

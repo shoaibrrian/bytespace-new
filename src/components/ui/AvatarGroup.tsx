@@ -6,10 +6,6 @@ const sizes = {
   md: { box: "size-9", px: 36 },
 } as const;
 
-/**
- * Themeable through CSS variables set on any ancestor:
- * --avatar-badge-bg, --avatar-badge-text, --avatar-ring
- */
 export function AvatarGroup({
   avatars,
   label,

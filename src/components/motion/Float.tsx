@@ -9,7 +9,6 @@ type FloatProps = HTMLMotionProps<"div"> & {
   rotate?: number;
 };
 
-/** Endless gentle floating, for decorative shapes and cards. */
 export function Float({
   amplitude = 10,
   duration = 5,

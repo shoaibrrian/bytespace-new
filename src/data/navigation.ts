@@ -1,7 +1,7 @@
 export const navLinks = [
-  { label: "Home", href: "/" },
-  { label: "Courses", href: "/#courses" },
-  { label: "Creators", href: "/#creators" },
+  { id: "home", label: "Home", href: "/" },
+  { id: "courses", label: "Courses", href: "/#courses" },
+  { id: "creators", label: "Creators", href: "/#creators" },
 ] as const;
 
 export const authLinks = [

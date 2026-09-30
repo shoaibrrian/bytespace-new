@@ -6,7 +6,6 @@ import { heroContent, heroShapes } from "@/data/hero";
 import { enter, floating } from "@/lib/motion";
 import { cn, HERO_ANCHOR_Y, uw, ux, uy } from "@/lib/utils";
 
-// Cards show from tablet up, at 75% size until lg
 const cardWrap = "hero-enter absolute z-20 hidden md:block";
 const cardScale = "origin-top-left md:scale-75 lg:scale-100";
 
@@ -16,7 +15,6 @@ export function HeroDecor() {
   return (
     <>
       {heroShapes.map((shape, i) => {
-        // Shapes beside the heading would overlap the text on small screens
         const besideHeading = shape.top + shape.height / 2 < HERO_ANCHOR_Y;
         const delay = 0.6 + i * 0.08;
 
@@ -49,7 +47,6 @@ export function HeroDecor() {
                 aria-hidden
                 width={shape.width}
                 height={shape.height}
-                loading="eager"
                 className="h-auto w-full max-w-none"
               />
             </div>

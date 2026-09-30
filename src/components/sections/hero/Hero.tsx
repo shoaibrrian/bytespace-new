@@ -35,7 +35,6 @@ export function Hero() {
           </div>
         </Container>
 
-        {/* Visual stage: in flow below lg, covers the whole hero at lg */}
         <div className="pointer-events-none relative mt-8 h-[calc(510*var(--u))] [--y0:0px] lg:absolute lg:inset-0 lg:mt-0 lg:h-auto lg:[--y0:514px]">
           <div
             className="hero-enter absolute z-0"
@@ -52,7 +51,8 @@ export function Hero() {
               aria-hidden
               width={background.width}
               height={background.height}
-              loading="eager"
+              priority
+              sizes="(min-width: 1024px) 80vw, (min-width: 768px) 105vw, (min-width: 640px) 120vw, 160vw"
               className="h-auto w-full max-w-none"
             />
           </div>
@@ -72,6 +72,7 @@ export function Hero() {
               width={person.width}
               height={person.height}
               priority
+              sizes="(min-width: 1024px) 50vw, (min-width: 768px) 66vw, (min-width: 640px) 76vw, 100vw"
               className="h-auto w-full max-w-none"
               style={{
                 clipPath: "inset(20px 0 0 0)",

@@ -5,12 +5,10 @@ import { ease, viewport } from "@/lib/motion";
 
 type StaggerProps = HTMLMotionProps<"div"> & {
   as?: "div" | "ul" | "ol";
-  /** Delay between children (seconds) */
   gap?: number;
   delay?: number;
 };
 
-/** Parent: children wrapped in <StaggerItem> animate one after another. */
 export function Stagger({
   as = "div",
   gap = 0.1,

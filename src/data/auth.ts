@@ -12,31 +12,30 @@ export const signInContent = {
   switchHref: "/register",
 };
 
-// px, relative to the showcase stage's top-left corner (Figma frame 1440 x 1024)
 export const authShowcase = {
   stage: { width: 496, height: 558 },
   backCard: { left: 0, top: 90, width: 373 },
   frontCard: { left: 111, top: 0, width: 373 },
   ring: {
-    src: "/assets/auth/ring-lime.svg",
+    src: "/assets/auth/ring-lime.webp",
     left: 50,
     top: 30,
     width: 146,
-    height: 146,
+    height: 145,
   },
   spring: {
-    src: "/assets/auth/spring-white.svg",
+    src: "/assets/auth/spring-white.webp",
     left: 340,
     top: 320,
     width: 175,
-    height: 175,
+    height: 174,
   },
   cone: {
-    src: "/assets/auth/cone-lime.svg",
+    src: "/assets/auth/cone-lime.webp",
     left: -20,
     top: 390,
     width: 188,
-    height: 188,
+    height: 187,
   },
   students: { left: 226, top: 435 },
 } as const;

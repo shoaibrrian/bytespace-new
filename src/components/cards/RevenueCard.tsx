@@ -29,7 +29,7 @@ export function RevenueCard({
       <p className="text-[10px] leading-[1.2] text-white/80">{period}</p>
       <p className="mt-2 text-2xl font-bold leading-[1.2]">{amount}</p>
       {progress !== undefined && (
-        <ProgressBar value={progress} className="mt-2" />
+        <ProgressBar value={progress} label={title} className="mt-2" />
       )}
       {badge && (
         <span className="mt-2 inline-block rounded-full bg-secondary-400 px-2 py-0.5 text-[10px] font-medium text-neutral-950">
