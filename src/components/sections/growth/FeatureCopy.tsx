@@ -2,7 +2,7 @@ export function FeatureCopy({
   title,
   children,
 }: {
-  title: string; // "\n" = line break
+  title: string;
   children: React.ReactNode;
 }) {
   return (

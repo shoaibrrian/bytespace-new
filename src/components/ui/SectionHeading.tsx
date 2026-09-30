@@ -6,7 +6,7 @@ const titleSizes = {
 } as const;
 
 type SectionHeadingProps = {
-  title: string; // use "\n" for a line break
+  title: string;
   description?: string;
   align?: "center" | "left";
   size?: keyof typeof titleSizes;

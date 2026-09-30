@@ -7,7 +7,6 @@ type ScaledStageProps = {
   children: React.ReactNode;
 };
 
-/** Fixed-size design canvas (Figma px). Shrinks on phones, 1:1 from sm up. */
 export function ScaledStage({
   width,
   height,

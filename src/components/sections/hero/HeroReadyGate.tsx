@@ -2,6 +2,8 @@
 
 import { useEffect, useRef, useState } from "react";
 
+const MAX_WAIT_MS = 1200;
+
 export function HeroReadyGate({
   children,
   ...props
@@ -14,9 +16,14 @@ export function HeroReadyGate({
     if (!section) return;
 
     let cancelled = false;
-    const assets = Array.from(section.querySelectorAll("img"));
+    // Wait only for images that are on screen. Hidden ones (display: none) and ones
+    // below the fold are not loaded yet and must not delay the entrance animation.
+    const assets = Array.from(section.querySelectorAll("img")).filter((img) => {
+      const rect = img.getBoundingClientRect();
+      return rect.width > 0 && rect.top < window.innerHeight;
+    });
     const decoded = assets.map((img) => img.decode().catch(() => undefined));
-    const timeout = new Promise((resolve) => setTimeout(resolve, 2000));
+    const timeout = new Promise((resolve) => setTimeout(resolve, MAX_WAIT_MS));
 
     Promise.race([
       Promise.all([...decoded, document.fonts.ready]),

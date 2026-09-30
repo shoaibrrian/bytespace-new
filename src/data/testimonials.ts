@@ -39,26 +39,25 @@ export const testimonials: Testimonial[] = [
   },
 ];
 
-// Figma px on the 1440 x 784 frame (same glow files as the growth section)
 export const testimonialsGlows = {
   designHeight: 784,
   items: [
     {
-      src: "/assets/testimonials/glow-lime-top.png",
+      src: "/assets/testimonials/glow-lime-top.webp",
       left: 395,
       top: 5,
       width: 672,
       height: 672,
     },
     {
-      src: "/assets/testimonials/glow-lime-top.png",
+      src: "/assets/testimonials/glow-lime-top.webp",
       left: 1000,
       top: 0,
       width: 1000,
       height: 800,
     },
     {
-      src: "/assets/testimonials/glow-blue-left.png",
+      src: "/assets/testimonials/glow-blue-left.webp",
       left: 0,
       top: 270,
       width: 560,

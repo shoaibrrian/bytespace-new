@@ -26,45 +26,44 @@ export const heroContent = {
   },
 };
 
-// Figma px on the 1440px design frame (left/top/width/height of each PNG box)
 export const heroShapes = [
   {
-    src: "/assets/hero/spring-lime.svg",
+    src: "/assets/hero/spring-lime.webp",
     left: -3.58,
     top: 221,
     width: 286.79,
     height: 286.79,
   },
   {
-    src: "/assets/hero/spring-white-small.svg",
+    src: "/assets/hero/spring-white-small.webp",
     left: 183,
     top: 477,
     width: 175,
     height: 175,
   },
   {
-    src: "/assets/hero/ring-white.svg",
+    src: "/assets/hero/ring-white.webp",
     left: 18,
     top: 682,
     width: 342,
     height: 342,
   },
   {
-    src: "/assets/hero/triangle-white.svg",
+    src: "/assets/hero/triangle-white.webp",
     left: 1106,
     top: 464,
     width: 188,
     height: 188,
   },
   {
-    src: "/assets/hero/cylinder-lime.svg",
+    src: "/assets/hero/cylinder-lime.webp",
     left: 1285,
     top: 255,
     width: 165,
     height: 165,
   },
   {
-    src: "/assets/hero/spring-white-large.svg",
+    src: "/assets/hero/spring-white-large.webp",
     left: 1127,
     top: 672,
     width: 330,
@@ -72,10 +71,9 @@ export const heroShapes = [
   },
 ] as const;
 
-// Figma px on the 1440px design frame
 export const heroVisual = {
   person: {
-    src: "/assets/hero/person.svg",
+    src: "/assets/hero/person.webp",
     left: 400,
     top: 525,
     width: 700,

@@ -24,7 +24,7 @@ export function ProgressCard({
       <p className="font-heading text-heading-m font-semibold text-neutral-950">
         {value}%
       </p>
-      <ProgressBar value={value} />
+      <ProgressBar value={value} label={label} />
     </FloatingCard>
   );
 }

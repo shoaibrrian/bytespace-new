@@ -5,52 +5,51 @@ export const ctaContent = {
   action: { label: "Join as Creator", href: "/register" },
 };
 
-// Figma px on the 1440 x 488 frame
 export const ctaShapes = [
   {
-    src: "/assets/cta/spring-lime-1.svg",
+    src: "/assets/cta/spring-lime-1.webp",
     left: 0,
     top: 0,
     width: 250,
     height: 300,
   },
   {
-    src: "/assets/cta/spring-white.svg",
+    src: "/assets/cta/spring-white.webp",
     left: 178,
     top: 5,
     width: 175,
     height: 175,
   },
   {
-    src: "/assets/cta/cone-white.svg",
+    src: "/assets/cta/cone-white.webp",
     left: 0,
     top: 195,
     width: 150,
     height: 150,
   },
   {
-    src: "/assets/cta/ring-lime.svg",
+    src: "/assets/cta/ring-lime.webp",
     left: 20,
     top: 310,
     width: 342,
     height: 342,
   },
   {
-    src: "/assets/cta/cone-lime.svg",
+    src: "/assets/cta/cone-lime.webp",
     left: 1105,
     top: 5,
     width: 175,
     height: 175,
   },
   {
-    src: "/assets/cta/cylinder-white.svg",
+    src: "/assets/cta/cylinder-white.webp",
     left: 1250,
     top: 20,
     width: 200,
     height: 200,
   },
   {
-    src: "/assets/cta/spring-lime-2.svg",
+    src: "/assets/cta/spring-lime-2.webp",
     left: 1100,
     top: 310,
     width: 330,

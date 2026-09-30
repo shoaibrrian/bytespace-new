@@ -14,7 +14,6 @@ type GlowLayerProps = {
   designWidth?: number;
 };
 
-/** Blurred background glows, positioned in % of the Figma frame so they scale with the section. */
 export function GlowLayer({
   glows,
   designHeight,
@@ -22,9 +21,9 @@ export function GlowLayer({
 }: GlowLayerProps) {
   return (
     <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
-      {glows.map((glow) => (
+      {glows.map((glow, index) => (
         <Image
-          key={glow.src}
+          key={`${glow.src}-${index}`}
           src={glow.src}
           alt=""
           width={glow.width}

@@ -27,35 +27,35 @@ export const pathVisual = {
   stage: { width: 580, height: 570 },
   course: { left: 0, top: 0, width: 373 },
   person: {
-    src: "/assets/detail/boy.svg",
+    src: "/assets/detail/boy.webp",
     left: 10,
     top: 55,
     width: 600,
-    height: 540,
+    height: 587,
   },
   progress: { left: 345, top: 213, value: 55 },
   spring: {
-    src: "/assets/detail/spring-lime-1.svg",
+    src: "/assets/detail/spring-lime-1.webp",
     left: 406,
     top: 67,
     width: 215,
-    height: 215,
+    height: 214,
   },
 } as const;
 
 export const creatorVisual = {
   stage: { width: 545, height: 560 },
   person: {
-    src: "/assets/detail/girl.svg",
+    src: "/assets/detail/girl.webp",
     left: 28,
     top: 0,
     width: 535,
-    height: 596,
+    height: 664,
   },
   revenue: { left: 0, top: 8, width: 232 },
   yearly: { left: 0, top: 158, width: 134 },
   spring: {
-    src: "/assets/detail/spring-lime-2.svg",
+    src: "/assets/detail/spring-lime-2.webp",
     left: 305,
     top: 114,
     width: 215,
@@ -64,7 +64,6 @@ export const creatorVisual = {
   students: { left: 283, top: 377 },
 } as const;
 
-// ---- Background glows: px on the 1440 x 1460 Figma frame ----
 export const growthGlows = {
   designHeight: 1460,
   items: [

@@ -19,7 +19,7 @@ export function LogoStrip() {
                 alt={`${logo.alt} ${index + 1}`}
                 width={169}
                 height={42}
-                className="h-auto w-[120px] transition-transform duration-300 hover:scale-105 sm:w-[140px] lg:w-[169px]"
+                className="h-auto w-[120px] transition-transform duration-300 hover:scale-105 sm:w-[140px] lg:h-[42px] lg:w-[169px] lg:object-contain"
               />
             </StaggerItem>
           ))}
